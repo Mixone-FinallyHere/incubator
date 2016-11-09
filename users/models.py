@@ -4,7 +4,6 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import AbstractBaseUser, UserManager, PermissionsMixin
-from django.contrib.auth.models import Group
 from django.core.urlresolvers import reverse
 
 
@@ -48,6 +47,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         permissions = (
             ("change_balance", "Peut modifier son ardoise"),
         )
+        ordering = ['username']
 
     USERNAME_FIELD = "username"
     REQUIRED_FIELDS = ['email']
