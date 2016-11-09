@@ -69,6 +69,7 @@ INSTALLED_APPS = (
     'actstream',
     'manmail',
     'redir',
+    'promises',
 )
 
 MIDDLEWARE_CLASSES = (
